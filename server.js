@@ -16,7 +16,7 @@ server.use(proxy('sandbox.moip.com.br', {
     forceHttps : true,
     headers    : {
       'User-Agent' : 'Proxy-Moip 1.0.0',
-      'Authorization' : 'Basic MDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDE6QUJBQkFCQUJBQkFCQUJBQkFCQUJBQkFCQUJBQkFCQUJBQkFCQUJBQg=='
+      'Authorization' : process.env.BASIC_AUTH
     }
   }
 }));

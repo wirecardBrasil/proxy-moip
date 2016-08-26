@@ -4,7 +4,9 @@
   "description": "Proxy Moip",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "test": "mocha",
+    "coverage": "istanbul cover _mocha --report html -- -R spec "
   },
   "author": "Moip",
   "license": "ISC",
@@ -12,13 +14,10 @@
     "async": "^0.9.x",
     "colors": "~1.0.3",
     "express": "^4.14.0",
+    "foobar": "1.1.0",
+    "foreman": "2.0.0",
     "lodash": "2.4.x",
     "request": "^2.74.0"
-  },
-  "scripts": {
-    "start": "node server.js",
-    "test": "mocha",
-    "coverage": "istanbul cover _mocha --report html -- -R spec "
   },
   "devDependencies": {
     "body-parser": "^1.12.0",
@@ -29,6 +28,7 @@
     "qs": "^2.3.3",
     "should": "1.1.x",
     "supertest": "^0.15.0",
-    "url": "^0.10.3"
+    "url": "^0.10.3",
+    "foreman": "^2.0.0"
   }
 }

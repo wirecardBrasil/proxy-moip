@@ -1,10 +1,11 @@
 # Proxy Moip
 
-A proxy to foward requests for Moip.
+A proxy to foward requests to Moip.
 
 ## Usage
 
-* Use `node proxy-moip.js` to start the app.
+* Install dependecies `npm install`
+* Use `nf start` to start the app.
 * We recommend you to use Heroku for deploying
 
 ## Contributing
