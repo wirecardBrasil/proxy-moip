@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+  <body>
+
+  <h1>Express Proxy</h1>
+
+  <h2>moip-sandbox</h2>
+  <pre id="moip-sandbox"></pre>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $.get('/moip-sandbox/v2/orders/ORD-DBBW70B4SPMI', printResponse('moip-sandbox'));
+
+      function printResponse (name) {
+        return function (data) {
+          console.log('  ##### ' + name + ' #####  ');
+          console.log(data);
+
+        $('#' + name).text(JSON.stringify(data, null, 2));
+        };
+      }
+    });
+  </script>
+  </body>
+</html>
